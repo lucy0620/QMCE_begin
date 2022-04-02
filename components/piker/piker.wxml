@@ -1,0 +1,11 @@
+<!--components/piker/piker.wxml-->
+<vant-popup show="{{ show }}" bind:close="onCancel" position="bottom">
+<vant-picker 
+show-toolbar
+columns="{{list}}" 
+default-index="{{defaultIndex}}"
+title="{{title}}" 
+bind:cancel="onCancel"
+bind:confirm="onConfirm"
+/>
+</vant-popup>

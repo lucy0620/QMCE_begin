@@ -1,0 +1,16 @@
+/* components/labelForm/index.wxss */
+.labelForm .imageList .uploader {
+  padding: 0rpx !important;
+}
+
+.labelForm .stepper-unit {
+  margin-left: 10rpx;
+}
+
+
+
+
+/* .labelForm .imageList .image-choose-container {
+  width: 50% !important;
+  height: 50% !important;
+} */

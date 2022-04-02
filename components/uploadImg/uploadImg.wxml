@@ -1,0 +1,14 @@
+<view class="shopImg">
+  <view class="add-image">
+    <view class="images-box"
+     wx:for="{{imageList}}" wx:key="srcIndex" wx:for-item='srcItem' wx:for-index='srcIndex'>
+      <image class="image_size" data-index="{{srcIndex}}" data-src="{{srcItem}}" src="{{srcItem}}"
+      ></image>
+      <text class="cuIcon-close delete-image" data-delete-Index="{{srcIndex}}" bindtap="deleteImage"></text>
+    </view>
+    <view class="images-add" wx:if="{{imageList.length !== count}}" bindtap='browse'>
+      <text class="cuIcon-camera"></text>
+      <view style="font-size: 0.8rem;">添加图片</view>
+    </view>
+  </view>
+</view>

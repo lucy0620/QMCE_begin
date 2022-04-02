@@ -1,0 +1,69 @@
+/* components/appMsgL/index.wxss */
+.wrap{
+  padding: 40rpx;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.wrap_item {
+  margin-top: 50rpx;
+}
+.pb20{
+  padding-bottom: 20rpx;
+}
+.sm{
+  font-size: .9em;
+  margin-top: 5rpx;
+  color: var(--gray);
+}
+.red{
+  color: var(--red);
+}
+button{
+  width: 6em;
+  height: 2em;
+  font-size: 1em!important;
+  font-weight: normal;
+}
+
+/* 弹性布局相关 */
+.acea-row {
+  display: flex;
+}
+.flexs {
+  flex: 1;
+}
+
+/* 不换行 */
+.acea-row.flex-nowarp {
+  flex-wrap: nowrap;
+}
+/* 居中 */
+.acea-row.row-center-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+/* 横向居中 */
+.acea-row.row-middle {
+  align-items: center;
+}
+/* 竖向居中 */
+.acea-row.row-center {
+  justify-content: center;
+}
+/* 竖向自适应左右 */
+.acea-row.row-between {
+  justify-content: space-between;
+}
+/* 横向居中竖向自适应左右 */
+.acea-row.row-between-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+/* 多个竖向 */
+.acea-row.row-column {
+  flex-direction: column;
+}
+/* 竖向留空自适应左右 */
+.acea-row.row-around {
+  justify-content: space-around;
+}

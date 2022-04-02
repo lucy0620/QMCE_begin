@@ -1,0 +1,208 @@
+/* component/author-alter/index.wxss */
+.acea-row {
+  display: flex;
+}
+.flex-nowarp {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.acea-row.row-middle {
+  align-items: center;
+}
+.acea-row.row-center {
+  justify-content: center;
+}
+.acea-row.row-between-wrapper {
+  align-items: center;
+  justify-content: space-between;
+}
+.acea-row.row-center-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.sel1 {
+  width: 123rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  transition: ease-in all 0.8s;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  background: white;
+}
+
+.top-contentMy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.numsNber-Icon {
+  background-color: red;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 50%;
+  text-align: center;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  right: 0;
+  top: 0;  
+}
+
+.sharing-packets {
+  position: fixed;
+  left: 75%;
+  z-index: 5;
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 1;
+  transform: scale(1);
+  bottom: 10%;
+  padding-left: 40rpx;
+  padding-right: 10rpx;
+  border-radius: 33rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+}
+
+.dinyuebtn {
+  color: white;
+  text-align: center;
+  border-radius: 27rpx;
+  font-size: 17rpx;
+  padding-bottom: 8rpx;
+}
+
+.sharing-packets-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.shopBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  position: fixed;
+  bottom: 80rpx;
+  color: white;
+  text-align: center;
+  z-index: 99;
+  right: 10rpx;
+  width: 133rpx;
+  height: 168rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-inner {
+  display: flex;
+  color: black;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px #5555;
+}
+
+.home-text {
+  margin-top: 15px;
+  padding-right: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+
+@keyframes open {
+
+  /* 0%{
+    margin-left: -20px;
+  } */
+  0% {
+    margin-left: -200px;
+  }
+
+  100% {
+    margin-left: -300px;
+    /* width:250px; */
+  }
+}
+
+.home.on {
+  width: 60%;
+}
+
+.activeAnimation {
+  animation: open 4000ms alternate ease-in-out;
+}
+
+.home .homeCon {
+  box-shadow: 3px 3px 3px 3px#5555;
+  border-radius: 50rpx;
+  box-sizing: border-box;
+  transform: translate3d(500rpx, 0, 0);
+  transition: all .3s cubic-bezier(.25, .5, .5, .9);
+  height: 80rpx;
+  background-color: white;
+  color: #FFC300;
+}
+
+.home .homeCon.on {
+  transform: translate3d(0, 0, 0);
+  color: #fff;
+}
+
+.home .homeCon .iconfont {
+  font-size: 48rpx;
+  width: 80rpx;
+}
+
+.home .pictrue {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: -166rpx;
+}
+
+.home .pictrue image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+.home .pictrue.on {
+  margin-top: 0;
+}
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id 2658360 */
+  src: url('//at.alicdn.com/t/font_2658360_3kpj1ohqdez.woff2?t=1625648178192') format('woff2'),
+    url('//at.alicdn.com/t/font_2658360_3kpj1ohqdez.woff?t=1625648178192') format('woff'),
+    url('//at.alicdn.com/t/font_2658360_3kpj1ohqdez.ttf?t=1625648178192') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaoxi:before {
+  content: "\e6888";
+  font-size: 50rpx;
+}

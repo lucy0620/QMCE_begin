@@ -1,0 +1,13 @@
+<view class='home acea-row row-middle' bindtap="clickOk"
+      style='overflow-x:{{homeActive==true?"":"hidden"}};top:{{top*2}}rpx;bottom: {{bottom}};' catchtouchmove="setTouchMove">
+      <view class="home-inner {{homeActive == true ? 'activeAnimation':''}} "
+            style=' border-radius:{{homeActive==true?"37px":"50%"}};'>
+            <view class='sharing-packets-box'>
+                  <view class="numsNber-Icon" wx:if="{{newsCount > 0}}">{{newsCount > 99? '99+' : newsCount}}</view>
+                  <text class="cuIcon-{{icon}}" style="font-size: 60rpx;"></text>
+            </view>
+            <view class="home-text" style='display:{{homeActive==true?"block":"none"}}'>
+                  Hi,您有{{newsCount}}条未读消息！
+            </view>
+      </view>
+</view>

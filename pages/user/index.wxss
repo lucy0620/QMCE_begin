@@ -1,0 +1,63 @@
+/* pages/user/user.wxss */
+/* 头部信息 */
+.userinfo {
+  background: #FFFFFF;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.blur {
+  width: 750rpx;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--myTheme);
+  box-shadow: 5rpx 5rpx 25rpx 5rpx var(--gray);
+}
+.blur image{
+  position: absolute;
+  top: -33%;
+  width: 750rpx;
+  height: 750rpx;
+  filter:blur(10rpx);
+  -webkit-filter:blur(10rpx);
+  -moz-filter:blur(10rpx);
+  -ms-filter:blur(10rpx);
+  -o-filter:blur(10rpx);
+}
+.avatar{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-75rpx);
+}
+.nickname{
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 40rpx;
+  text-align: center;
+  transform: translateY(-37.5rpx);
+  letter-spacing: 10rpx;
+}
+/* 设置等 */
+.item-wrap{
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+  position: fixed;
+  width: 100%;
+  padding: 30rpx 60rpx;
+  background-color: #FFFFFF;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.item{
+  color: var(--gray);
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid var(--myTheme);
+}
+.item:last-of-type{
+  border-bottom: 0rpx;
+}

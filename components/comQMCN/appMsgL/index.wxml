@@ -1,0 +1,40 @@
+<!--components/appMsgL/index.wxml-->
+<view class="wrap">
+  <view class="wrap_item acea-row flex-nowarp row-between row-middle">
+    <view>
+      <view>开通订阅消息通知</view>
+      <view class="sm">向你发送小程序订阅消息</view>
+    </view>
+    <view>
+      <switch bindchange="change" checked = "{{ _isOpen}}"></switch>
+    </view>
+  </view>
+
+  <view class="wrap_item">
+    <view>订阅消息说明</view>
+    <view class="sm">当订阅剩余次数为0时，无法接收到以下该类消息。</view>
+    <view class="sm">当订阅剩余次数少于5时，以红色提醒。</view>
+  </view>
+
+  <view class="wrap_item" style="padding: 60rpx 0;">
+    <!-- 每个订阅消息 -->
+    <view wx:for="{{_templateIds}}" wx:key="index" class="acea-row flex-nowarp row-between row-middle pb20">
+      <view>
+        <view>{{item.title}}</view>
+        <view class="sm">订阅次数剩余 <text class="{{item.count <5 ? 'red':''}}">{{item.count}} </text>次</view>
+      </view>
+      <view>
+      <button bindtap="book" data-item="{{item}}" type="primary" size="mini">订阅+1</button>
+      </view>
+      
+    </view>
+  </view>
+
+  <view bindtap="auth" class="wrap_item acea-row flex-nowarp row-between row-middle">
+    <view>
+      <view>微信授权设置</view>
+      <view class="sm">拒绝订阅消息后重新授权</view>
+    </view>
+    <view class="cuIcon-right"></view>
+  </view>
+</view>

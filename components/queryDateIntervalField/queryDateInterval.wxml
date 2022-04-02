@@ -1,0 +1,14 @@
+<!--components/queryDateInterval/queryDateInterval.wxml-->
+<view>
+  <vant-field data-id="1" catchtap="onOpenDate" value="{{startTime}}" readonly label='开始时间' placeholder="请选择开始时间"></vant-field>
+  <vant-field data-id="2" catchtap="onOpenDate" value="{{endTime}}" readonly label='结束时间' placeholder="请选择结束时间"></vant-field>
+</view>
+
+<!-- 日期选择器 -->
+<vant-popup show="{{ show }}" position="bottom" bind:close="onDatetimePickerCancel">
+  <!-- min-date="{{ minDate }}" -->
+  <vant-datetime-picker type="date" title="{{dateTimeTitle}}"
+   min-date="{{  minDate  }}" max-date="{{  maxDate  }}" value="{{ datetimeValue }}"
+    bind:confirm="onDatetimePickerConfirm" bind:cancel="onDatetimePickerCancel">
+  </vant-datetime-picker>
+</vant-popup>

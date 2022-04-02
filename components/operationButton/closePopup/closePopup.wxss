@@ -1,0 +1,11 @@
+/* components/closePopup/closePopup.wxss */
+.acea-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.acea-row.row-center {
+  justify-content: center;
+}
+.close-popup  .title{
+  padding: 20rpx 0rpx;
+}

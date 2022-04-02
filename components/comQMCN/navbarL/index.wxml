@@ -1,0 +1,31 @@
+<!--components/navbar/index.wxml-->
+<view class="navbar {{navbarData.class}}" style= "height:{{height}}rpx; background:{{backgroundColor}}">
+   <view class="navbarH acea-row" style="height: {{ height}}rpx;">
+      <view class='navbarCon acea-row row-middle'>
+         <view class="btn-box" wx:if="{{navbarData.return || navbarData.home}}" style="{{navbarData.home && navbarData.return ? 'border: 1px solid #fff;' : ''}}">
+            <!-- 返回按钮  -->
+            <view wx:if="{{navbarData.return }}" class='cuIcon-back return-btn' style="color: {{color}};padding: 10rpx 20rpx; {{navbarData.home ? 'border-right: 1px solid #fff' : ''}}"
+               bindtap='return'></view>
+            <!-- 返回首页 -->
+            <view wx:if="{{navbarData.home}}" class='cuIcon-home return-btn' style="color: {{color}};padding: 10rpx 20rpx;"
+               bindtap='goHome'></view>
+         </view>
+         <!-- 页面标题 -->
+         <view wx:if="{{navbarData.type === 1}}"
+         style="color:{{color}};{{navbarData.type === 1 ? 'font-size: 36rpx;': ''}}"
+         class='name title-line flex-grow'>
+         {{navbarData.title}}</view>
+
+         <view bindtap="onClick" wx:if="{{navbarData.type != 1}}">
+            <search-l 
+            bind:onSearch="onSearch"
+            disabled="{{navbarData.search.disabled}}"
+            placeholder="{{navbarData.search.placeholder}}" 
+            inputWidth="{{'500rpx'}}">
+            </search-l>
+         </view>
+
+      </view>
+   </view>
+</view>
+<view style='height:{{height}}rpx;'></view>

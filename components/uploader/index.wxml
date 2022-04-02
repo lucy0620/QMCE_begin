@@ -1,0 +1,76 @@
+<!-- 图片上传components/uploader/index.wxml-->
+<view class="uploader">
+  <!-- 标题 -->
+  <view class="imgCount acea-row row-between" wx:if="{{title != null && showLimit}}">
+    <view> {{title}} </view>
+    <view wx:if="{{showLimit}}"> {{imageList.length}}/{{count}}</view>
+  </view>
+  <!-- 编辑操作 -->
+  <view wx:if="{{(showType === 'column' || showType === 'columnObj') && imageList != null && imageList.length != 0}}" class="acea-row row-between">
+    <view wx:if="{{!showLimit && title != null}}"> {{title}} </view>
+    <z-button round text="{{editText}}" bindtap="handleEdit"></z-button>
+  </view>
+  <!-- 九宫格 图片数组 -->
+  <view wx:if="{{showType === 'sudoku'}}" class="image-drag-container">
+    <movable-area class="movable-area"
+      style="min-height:{{imageList === null || imageList.length <= 3 ? width+'rpx' : imageWitdh + 'px'}};height:{{areaHeight}}px">
+      <view class="image-choose-container">
+        <view class="image-item" style="width:{{width}}rpx;height:{{width}}rpx" wx:for="{{imageList}}" wx:for-item="url"
+          wx:key="url" data-url="{{url}}" data-index="{{index}}" bindlongpress='handleLongTap'
+          bindtouchend='handleTouchEnd' catchtouchmove='handleTouchMove'>
+          <image src="{{url}}" mode="aspectFill" bindtap="handlePreview" data-index="{{index}}" data-url="{{url}}">
+          </image>
+          <view class="close" bindtap="handleDelete" data-index="{{index}}">X</view>
+        </view>
+        <view class="add-button acea-row row-column row-center-wrapper" style="width:{{width}}rpx;height:{{width}}rpx"
+          wx:if="{{imageList.length !== count}}" bindtap="handleChooseImage">
+          <icon class="iconfont {{iconfont}}" style="font-size: 50rpx"></icon>
+          <view class="add-button-text" wx:if="{{text != null}}">{{text}}</view>
+        </view>
+        <view style="width:{{width}}rpx" class="image-item image-item-temp" wx:if="{{imageList.length%3==1}}"></view>
+      </view>
+      <movable-view class="movable-view" style="width:{{width}}rpx;height:{{width}}rpx" hidden="{{hidden}}" x="{{x}}"
+        y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}">
+        <image src="{{currentImg}}" wx:if="{{currentImg.length>0}}"></image>
+      </movable-view>
+    </movable-area>
+  </view>
+  <!-- 列式 图片数组 -->
+  <view wx:if="{{showType === 'column'}}" class="images acea-row ">
+    <view class="images-box" wx:for="{{imageList}}" wx:for-item="url"
+      wx:key="url" data-url="{{url}}">
+      <image mode="{{autoHeight ? 'widthFix' : 'scaleToFill'}}" class="image-size"
+        style="width: {{width}}rpx;height: {{height != null ? height : ''}}rpx" data-index="{{index}}"
+          data-url="{{url}}" src="{{url}}" bindtap="handlePreview"></image>
+      <view class="close" bindtap="handleDelete" data-index="{{index}}" wx:if="{{isEdit}}">X</view>
+      <view class="operation acea-row row-around" wx:if="{{isEdit}}">
+        <z-button round text="往上移" data-index="{{index}}" wx:if="{{index != 0}}" bindtap="handleTop"></z-button>
+        <z-button round text="往下移" data-index="{{index}}" wx:if="{{index != imageList.length - 1}}" bindtap="handleDown"></z-button>
+      </view>
+    </view>
+    <view class="images-add" style="width: {{width}}rpx;height: {{addHeight != null ? addHeight : height}}rpx"
+      wx:if="{{imageList.length !== count}}" bindtap='handleChooseImage'>
+      <icon class="iconfont {{iconfont}}" style="font-size: 50rpx"></icon>
+      <view wx:if="{{text != null}}">{{text}}</view>
+    </view>
+  </view>
+  <!-- 列式 图片对象数组 -->
+  <view wx:if="{{showType === 'columnObj'}}" class="images acea-row">
+    <view class="images-box" wx:for="{{imageList}}" wx:for-item="url"
+      wx:key="url" data-url="{{url}}">
+      <image mode="{{autoHeight ? 'widthFix' : 'scaleToFill'}}" class="image-size"
+        style="width: {{width}}rpx;height: {{height != null ? height : ''}}rpx" data-index="{{index}}"
+          data-url="{{url.fileUrl}}" src="{{url.fileUrl}}" bindtap="handlePreview2"></image>
+      <view class="close" bindtap="handleDelete2" data-index="{{index}}" wx:if="{{isEdit}}">X</view>
+      <view class="operation acea-row row-around" wx:if="{{isEdit}}">
+        <z-button round text="往上移" data-index="{{index}}" wx:if="{{index != 0}}" bindtap="handleTop"></z-button>
+        <z-button round text="往下移" data-index="{{index}}" wx:if="{{index != imageList.length - 1}}" bindtap="handleDown"></z-button>
+      </view>
+    </view>
+    <view class="images-add" style="width: {{width}}rpx;height: {{addHeight != null ? addHeight : height}}rpx"
+      wx:if="{{imageList.length !== count}}" bindtap='handleChooseImage'>
+      <icon class="iconfont {{iconfont}}" style="font-size: 50rpx"></icon>
+      <view wx:if="{{text != null}}">{{text}}</view>
+    </view>
+  </view>
+</view>

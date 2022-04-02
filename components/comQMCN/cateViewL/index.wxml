@@ -1,0 +1,25 @@
+<!--components/comQMCN/cateViewL/index.wxml-->
+
+<view wx:if="{{ list.length > 0 }}">
+  <!-- 分类列表 -->
+  <view class='aside'>
+    <scroll-view scroll-y="true" style="height: {{ _height}}rpx;">
+      <view wx:for="{{ list }}" wx:key='index' bindtap="{{ index == active == true ? '' : 'changeCate' }}"
+        class="item {{ index == active ? 'on' : ''}}"
+        style="color: {{ index == active ? color : ''}};border-color: {{ index == active ? color : ''}};"
+        data-index='{{index}}' data-obj="{{item}}">
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 分类内容 -->
+  <view class="conter" style="min-height: {{_height}}rpx;">
+    <slot></slot>
+  </view>
+</view>
+<!-- 分类列表为空 -->
+<view wx:else>
+  <van-empty description="暂时商品分类信息" />
+</view>
+
+

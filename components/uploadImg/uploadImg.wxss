@@ -1,0 +1,82 @@
+/* components/uploadImg/uploadImg.wxss */
+@font-face {
+  font-family: "iconfont"; /* Project id 3120027 */
+  src: url('//at.alicdn.com/t/font_3120027_ay5vhhw4oek.woff2?t=1641372515275') format('woff2'),
+       url('//at.alicdn.com/t/font_3120027_ay5vhhw4oek.woff?t=1641372515275') format('woff'),
+       url('//at.alicdn.com/t/font_3120027_ay5vhhw4oek.ttf?t=1641372515275') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete-c:before {
+  content: "\e6001";
+  font-size: 20px;
+}
+
+.icon-add-c:before {
+  content: "\e67ff";
+  font-size: 26px;
+}
+/* 添加的图片边框 */
+.shopImg {
+  display: flex;
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+/* 上传图片 */
+.images-box {
+  position: relative;
+  /* width: 139rpx;
+  height: 139rpx; */
+  margin-right: 18rpx;
+  margin-bottom: 32rpx;
+}
+
+/* 删除图片的样式 */
+.delete-image {
+  position: absolute;
+  z-index: 10;
+  width: 25rpx;
+  height: 25rpx;
+  right: 0;
+  top: -18rpx;
+  border-radius: 50%;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 新增图片 */
+.add-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 遍历的图片元素 */
+.image_size {
+  width: 200rpx;
+  height: 200rpx;  
+  border-radius: 5px;
+}
+
+/* todo */
+.image_addBtn {
+  height: 142rpx;
+}
+
+.images-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}

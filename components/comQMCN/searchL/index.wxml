@@ -1,0 +1,28 @@
+<!--components/search/search.wxml-->
+<view>
+<!-- 搜索 -->
+<view class="search acea-row row-between-wrapper {{fixed? 'searchFiexd':''}}" style="width: {{inputWidth}};background: {{background}}">
+  <!-- 白色 -->
+  <view class='input acea-row row-between-wrapper' style="background-color: {{iptBackground}};">
+    <!-- 图标 -->
+    <text class='cuIcon-search'></text>
+    <!-- input -->
+    <form style="flex: 1;margin-right: 50rpx;" bindsubmit="onSearch">
+      <input
+      placeholder="{{placeholder}}" 
+      value='{{searchValue}}' 
+      bindinput="onChange"
+      bindconfirm="onSearch" 
+      name="search"
+      confirm-type='search'
+      placeholder-class='placeholder' 
+      disabled = "{{disabled}}"
+      ></input>
+    </form>
+    <!-- 清空 -->
+    <text catchtap="clear" wx:if="{{searchValue}}" class='cuIcon-close'></text>
+  </view>
+</view>
+
+<view wx:if="{{fixed}}" style="width: {{inputWidth}};height: 86rpx;"></view>
+</view>

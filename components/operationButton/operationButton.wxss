@@ -1,0 +1,64 @@
+/* components/operationButton/operationButton.wxss */
+.acea-row {
+  display: flex;
+}
+.flex-nowarp {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.acea-row.row-center-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.operation-button {
+  margin: 6% 5%;
+}
+
+.operation-button-absolute {
+  justify-content: center;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 30rpx 0rpx 40rpx 0rpx;
+}
+
+.operation-button .buttons {
+  bottom: 4%;
+}
+
+.operation-button .position {
+  position: absolute;
+}
+
+.operation-button .middle {
+  right: 0;
+  left: 0;
+}
+
+.operation-button .left {
+  left: 1%;
+}
+
+.operation-button .right {
+  right: 5%;
+}
+
+.operation-button-buts button:not([size='mini']) {
+  width: 320rpx;
+  font-size: 35rpx;
+}
+
+.operation-button-but-right button:not([size='mini']) {
+  margin-right: 30rpx;
+}
+
+.operation-button-but button:not([size='mini']) {
+  width: 600rpx;
+  font-size: 35rpx;
+}
+

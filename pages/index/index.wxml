@@ -1,0 +1,26 @@
+<!--index.wxml-->
+
+<!-- 模板引用 -->
+<!-- <import src="./notice.wxml"></import>
+<template is="notice"></template>  -->
+<!-- wxs引用 -->
+<!-- <view>{{indexWxs.message}}</view>
+<wxs src="./index.wxs" module="indexWxs"></wxs> -->
+    
+<nav-bar navbarData = "{{ navbarData }}"  bind:searchConfirm = "search"></nav-bar>
+
+<button open-type="share">分享</button>
+<view>
+  <view class="pinkItem">
+    西瓜
+  </view>
+  <view class="pinkItem">
+    西瓜
+  </view>
+</view>
+<view class="pinkTitle">
+  剧情介绍
+</view>  
+
+<view style="height: {{ isIphoneX ? '178rpx' : '110rpx'}};"></view>
+<tab-bar activeColor = "{{ background }}" isIphoneX = "{{ isIphoneX }}"></tab-bar>

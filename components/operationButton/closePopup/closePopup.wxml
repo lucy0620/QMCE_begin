@@ -1,0 +1,7 @@
+<!--弹框带标题，可关闭 components/closePopup/closePopup.wxml-->
+<view class="close-popup">
+  <vant-popup round show="{{isPopupShow}}" bind:close="close">
+    <view class="acea-row row-center title">{{title}}</view>
+    <slot></slot>
+  </vant-popup>
+</view>

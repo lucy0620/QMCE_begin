@@ -1,0 +1,136 @@
+/* components/uploader/index.wxss */
+/* @import '/static/font/components/uploader/index.wxss'; */
+
+.uploader{
+  padding: 20rpx;
+  background: #fff;
+}
+
+.imgCount{
+  margin: 0 10rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 九宫格 上传图片样式 start */
+.image-drag-container{
+  padding:32rpx 0;
+  box-sizing:border-box;
+}
+
+.movable-area{
+  width: 100%;
+}
+
+.image-choose-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing:border-box;
+}
+
+.image-choose-container > view{
+  position: relative;
+  margin-bottom: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(248,248,248,1);
+  border-radius:12rpx;
+  box-sizing:border-box;
+  overflow: hidden;
+}
+
+.image-choose-container  .image-item-temp{
+  height: 0;
+  background: transparent;
+}
+
+.image-choose-container > view image{
+  width: 100%;
+  height: 100%;
+}
+
+.image-choose-container > view .close{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 32rpx;
+  height: 32rpx;
+  font-size: 12rpx;
+  text-align: center;
+  line-height: 32rpx;
+  color:#fff;
+  background:rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+
+.movable-view{
+  border:8rpx solid rgba(239,130,0,1);
+  border-radius:12rpx;
+  box-sizing:border-box;
+}
+
+.movable-view image{
+  width: 100%;
+  height: 100%;
+}
+
+.add-button{
+  font-size:32px;
+  font-weight:500;
+  color:rgba(0,0,0,0.4);
+}
+
+.add-button-text{
+  font-size: 25rpx;
+}
+
+/* 九宫格 上传图片样式 end */
+
+/* 列 上传图片样式 start */
+/* 添加的图片边框 */
+.images {
+  display: flex;
+  margin: 20rpx 0;
+}
+
+/* 上传图片 */
+.images-box {
+  position: relative;
+  margin-right: 18rpx;
+  /* margin-bottom: 16rpx; */
+}
+/* 遍历的图片元素 */
+.image-size {
+  border-radius: 5px;
+}
+.images-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}
+/* 删除图片的样式 */
+.images-box > .close{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 32rpx;
+  height: 32rpx;
+  font-size: 12rpx;
+  text-align: center;
+  line-height: 32rpx;
+  color:#fff;
+  background:rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+
+.images-box > .operation{
+  margin-bottom: 16rpx;
+}
+
+/* 列 上传图片样式 end */

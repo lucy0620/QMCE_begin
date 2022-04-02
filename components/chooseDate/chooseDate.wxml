@@ -1,0 +1,12 @@
+<!--components/chooseDate/chooseDate.wxml-->
+<vant-popup show="{{ show }}" bind:close="onDatetimePickerCancel" position="bottom" >
+  <vant-datetime-picker  type="date" 
+  title="{{title}}" 
+  min-date="{{  minDate  }}" 
+  max-date="{{  maxDate  }}" 
+  value="{{ value }}"
+  formatter="{{formatter}}"
+  bind:confirm="onDatetimePickerConfirm" 
+  bind:cancel="onDatetimePickerCancel">
+  </vant-datetime-picker>
+</vant-popup>

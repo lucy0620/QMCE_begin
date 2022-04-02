@@ -1,0 +1,17 @@
+<!--底部按钮 components/operationButton/operationButton.wxml-->
+<view class="{{isPosition ? 'operation-button-absolute' : 'operation-button'}} {{isButton ? 'acea-row flex-nowarp' : ''}}" style="background-color: {{ isPosition ? absoluteBackground : '' }};padding-bottom: {{iphoneX && isPosition ? '98rpx':'30rpx'}};"
+>
+  <!-- 取消按钮 -->
+  <view wx:if="{{isButton}}"
+    class="buttons acea-row row-center-wrapper  {{isButton ? 'left':'middle'}} {{isPosition ? 'position':''}}">
+    <vant-button class="operation-button-buts {{isPosition ? 'operation-button-but-right' : ''}}" plain type="primary"
+      color="{{leftButbackgroundColor}}" bindtap="back">
+      {{leftTitle}}
+    </vant-button>
+  </view>
+  <!-- 确认按钮 -->
+  <view class="buttons acea-row row-center-wrapper {{isButton ? 'right':'middle'}} {{isPosition ? 'position':''}}">
+    <vant-button class="{{ isLine ? 'operation-button-but' : 'operation-button-buts' }}" type="primary"
+      color="{{rightButbackgroundColor}}" bindtap="complete">{{rightTitle}}</vant-button>
+  </view>
+</view>

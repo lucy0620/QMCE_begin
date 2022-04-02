@@ -1,0 +1,81 @@
+/* pages/authorize/authorize.wxss */
+.container{
+  background: #ffffff;
+}
+page{
+  background: #ffffff;
+}
+.cont{
+  width: 710rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.selinfo{
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+}
+.selinfo .sel{
+  height: 50rpx;
+  width: 50rpx;
+}
+.selinfo label{
+  width: 650rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+.tit2{
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 30rpx;
+  width: 95%;
+  font-size: 14px;
+}
+
+.sel1{
+  width: 115rpx;
+  height: 115rpx;
+  margin-bottom: 60rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #f3af44;
+}
+.tit{
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 60rpx;
+}
+.bottom-btn{
+  margin-top: 250rpx;
+}
+.bottom-btn button{
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #ffffff;
+  background: #E96900;
+  margin: 0 auto;
+  padding: 0;
+}
+.bottom-new{
+  margin-top: 30rpx;
+}
+.bottom-new button{
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background: none;
+  margin: 0 auto;
+  border: 1px solid #999;
+  color: #333;
+  padding: 0;
+}

@@ -1,0 +1,24 @@
+<!-- 总高度110rpx/178rpx -->
+<view class="tab-bar" style="padding-bottom: {{ isIphoneX ? '68rpx': '0rpx' }};">   
+
+  <view class="section_item" 
+  wx:for="{{tabBar}}" wx:key="index" 
+  style="color: {{ active == index ? activeColor : '' }};"
+  bindtap="navigateDetail" 
+  data-url="{{item.pagePath}}">
+    <!-- 图标 -->
+    <view class="section_iconView">
+      <text class="{{item.iconName}} section_icon"
+    style="color: {{ tabBar.length % 2 != 0 && (tabBar.length-1)/2 == index ? '#F6F6F7':'' }};"
+    ></text>
+    </view>
+    <!-- 文字 -->
+    <text class="section_title">{{item.text}}</text>
+
+    <!-- 中间项 -->
+    <view class="center" wx:if="{{ tabBar.length % 2 != 0 && (tabBar.length-1)/2 == index}}">
+      <text class="{{item.iconName}} section_icon"></text>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,26 @@
+<!--pages/authorize/authorize.wxml-->
+<navbar>
+</navbar>
+
+<view class="container">
+  <view class='cont'>
+    <view class='selinfo'>
+    </view>
+    <image class="sel1" src="{{app.globalData.applet.appletHeadImage}}"></image>
+    <view class='tit'>欢迎来到{{app.globalData.applet.appletName}}</view>
+
+    <view class='tit2 acea-row row-center-wrapper'>为了给您提供更优质的服务,{{app.globalData.applet.appletName}}需要获取以下信息:</view>
+    <view class='selinfo'>
+      <label>将获取你的{{!isGetPhone?'公开信息（昵称、头像、地区及性别）':'手机号'}}</label>
+    </view>
+
+    <view class="bottom-btn">
+      <button style="width: 588rpx;background: {{app.globalData.background}}" wx:if="{{!isGetPhone}}" class="r" bindtap="getUserProfile"
+         >同意</button>
+      <button style="width: 588rpx;" wx:if="{{isGetPhone}}" class="r" open-type="getPhoneNumber"
+        bindgetphonenumber="getPhoneNumber">授权手机号</button>
+      <button style="margin-top:20px;width: 588rpx;background-color:#6666" class="r"
+        bindtap="cancelGetUserInfo">拒绝</button>
+    </view>
+  </view>
+</view>
