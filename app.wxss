@@ -5,22 +5,22 @@
 /* 统一样式 */
 page {
   /* 主题色 */
-  --myTheme: #C9D6FF; 
+  --myTheme: #abbcf1; 
   /* 主题色渐变 */
   --myThemeGradient: #E2E2E2;
 }
 	/* 条目样式 */
-	.pinkItem{
+	.themeItem{
 		color: var(--black);
 		display: flex;
 		align-items: center;
 		padding: 30rpx 0;
 		border-bottom: 1rpx solid var(--myTheme);
 	}
-	.pinkItem:last-of-type{
+	.themeItem:last-of-type{
 		border-bottom: 0rpx;
 	}
-	.pinkItem::before{
+	.themeItem::before{
 		content: "";
 		width: 15rpx;
 		height: 15rpx;
@@ -29,13 +29,13 @@ page {
 		transform: rotate(45deg);
 	}
 	/* 小节标题 */
-	.pinkTitle{
+	.themeTitle{
 		display: flex;
 		align-items: center;
 		padding: 25rpx 0;
 		font-size: 35rpx;
 	}
-	.pinkTitle::before{
+	.themeTitle::before{
 		content: '';
 		width: .5em;
 		margin-right: 1em;

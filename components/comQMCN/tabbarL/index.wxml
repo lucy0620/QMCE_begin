@@ -21,4 +21,5 @@
     </view>
   </view>
 </view>
+<view style="height: {{ isIphoneX ? '178rpx' : '110rpx'}};"></view>
 

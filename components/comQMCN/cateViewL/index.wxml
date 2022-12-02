@@ -19,7 +19,7 @@
 </view>
 <!-- 分类列表为空 -->
 <view wx:else>
-  <van-empty description="暂时商品分类信息" />
+  <van-empty description="暂无商品分类信息" />
 </view>
 
 

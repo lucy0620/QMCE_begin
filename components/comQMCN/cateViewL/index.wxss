@@ -10,9 +10,9 @@
   font-size: 32rpx;
   text-align: left;
   display: flex;
-  padding: 40rpx 0 40rpx 40rpx;
+  padding: 20rpx 0 20rpx 20rpx;
   justify-content: flex-start;
-  border-left: 5px solid transparent;
+  border-left: 12rpx solid transparent;
 }
 .aside .on{
   font-weight: 600;

@@ -11,16 +11,15 @@
 
 <button open-type="share">分享</button>
 <view>
-  <view class="pinkItem">
+  <view class="themeItem">
     西瓜
   </view>
-  <view class="pinkItem">
+  <view class="themeItem">
     西瓜
   </view>
 </view>
-<view class="pinkTitle">
+<view class="themeTitle">
   剧情介绍
 </view>  
 
-<view style="height: {{ isIphoneX ? '178rpx' : '110rpx'}};"></view>
 <tab-bar activeColor = "{{ background }}" isIphoneX = "{{ isIphoneX }}"></tab-bar>

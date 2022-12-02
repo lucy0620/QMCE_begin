@@ -2,12 +2,15 @@
 App({
   
   globalData: {
-    //页面配置
-    indexUrl: '/pages/index/index',
-    authorizeUrl: '/pages/authorize/index',
+    /* 页面配置 */
+    indexUrl: '/pages/index/index', // 首页路径:用于 1.一些导航回到首页按钮
+    authorizeUrl: '/pages/authorize/index', // 
 
     // mp3链接地址
     mp3Url: 'https://mall.gzpgkj.cn/mp3/',
+
+    // 服务器
+    baseUrl: 'http://localhost:7890',
 
     appid: '',
     isIphoneX: false,

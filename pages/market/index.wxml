@@ -3,8 +3,4 @@
 <cate-view list = "{{ cateList }}" color = "{{ background}}"></cate-view>
 
 
-
-
-
-<view style="height: {{ isIphoneX ? '178rpx' : '110rpx'}};"></view>
 <tab-bar active = "{{1}}" activeColor = "{{ background }}" isIphoneX = "{{ isIphoneX }}"></tab-bar>

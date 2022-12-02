@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    baseUrl: app.globalData.baseUrl,
     isIphoneX: app.globalData.isIphoneX,
     background: app.globalData.background,
     // 菜单列表
@@ -39,6 +40,16 @@ Page({
   },
   // 点击登录
   loginTap() {
+    wx.request({
+      url: 'http://localhost:7890' + '/login',
+      data:{
+        name: 'wt'
+      },
+      success:function(res){
+        console.log(res.data)
+      }
+    })
+    return
     let user = {
       nickname: '喵喵',
       avatar: '/static/user/userImg.png',
