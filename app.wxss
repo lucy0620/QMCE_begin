@@ -5,82 +5,96 @@
 /* 统一样式 */
 page {
   /* 主题色 */
-  --myTheme: #abbcf1; 
+  --myTheme: #abbcf1;
   /* 主题色渐变 */
   --myThemeGradient: #E2E2E2;
 }
-	/* 条目样式 */
-	.themeItem{
-		color: var(--black);
-		display: flex;
-		align-items: center;
-		padding: 30rpx 0;
-		border-bottom: 1rpx solid var(--myTheme);
-	}
-	.themeItem:last-of-type{
-		border-bottom: 0rpx;
-	}
-	.themeItem::before{
-		content: "";
-		width: 15rpx;
-		height: 15rpx;
-		margin: 0 20rpx;
-		background: var(--myTheme);
-		transform: rotate(45deg);
-	}
-	/* 小节标题 */
-	.themeTitle{
-		display: flex;
-		align-items: center;
-		padding: 25rpx 0;
-		font-size: 35rpx;
-	}
-	.themeTitle::before{
-		content: '';
-		width: .5em;
-		margin-right: 1em;
-		height: 1em;
-		background-color: var(--myTheme);
-	}
+
+/* 条目样式 */
+.themeItem {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid var(--myTheme);
+}
+
+.themeItem:last-of-type {
+  border-bottom: 0rpx;
+}
+
+.themeItem::before {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  margin: 0 20rpx;
+  background: var(--myTheme);
+  transform: rotate(45deg);
+}
+
+/* 小节标题 */
+.themeTitle {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0;
+  font-size: 35rpx;
+}
+
+.themeTitle::before {
+  content: '';
+  width: .5em;
+  margin-right: 1em;
+  height: 1em;
+  background-color: var(--myTheme);
+}
 
 
 /* 弹性布局相关 */
 .acea-row {
   display: flex;
 }
+
 .flexs {
   flex: 1;
 }
+
 /* 不换行 */
 .acea-row.flex-nowarp {
   flex-wrap: nowrap;
 }
+
 /* 居中 */
 .acea-row.row-center-wrapper {
   align-items: center;
   justify-content: center;
 }
+
 /* 横向居中 */
 .acea-row.row-middle {
   align-items: center;
 }
+
 /* 竖向居中 */
 .acea-row.row-center {
   justify-content: center;
 }
+
 /* 竖向自适应左右 */
 .acea-row.row-between {
   justify-content: space-between;
 }
+
 /* 横向居中竖向自适应左右 */
 .acea-row.row-between-wrapper {
   align-items: center;
   justify-content: space-between;
 }
+
 /* 多个竖向 */
 .acea-row.row-column {
   flex-direction: column;
 }
+
 /* 竖向留空自适应左右 */
 .acea-row.row-around {
   justify-content: space-around;

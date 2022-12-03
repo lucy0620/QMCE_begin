@@ -1,8 +1,7 @@
 const app = getApp()
-import * as utilShow from '../../utils/show'
+import * as utilStorage from '../../utils/storage'
 import * as utilRoute from '../../utils/route'
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -12,54 +11,44 @@ Page({
     background: app.globalData.background,
     // 菜单列表
     menuList: [{
-      id: 1,
       title: '消息订阅',
       link: true,
-      url: '/pages/user/msgManage/index',
-      auth: true
-    },{
-      id: 2,
+      url: '/pages/user/msgManage/msgManage',
+      auth: true,
+      show: false
+    }, {
+      title: '意见反馈',
+      link: true,
+      url: '/pages/user/msgManage/msgManage',
+      auth: true,
+      show: true
+    }, {
       title: '退出',
-      link: true
+      link: true,
+      show: app.globalData.user_info ? true : false
     }],
-    // user数据
-    user: {}
+    user_info: ''
+  },
 
+  // 点击登录
+  loginTap() {
+    utilRoute.navigate(app.globalData.authorizeUrl)
   },
   // 点击菜单
   menuTap(e) {
     let item = e.currentTarget.dataset.item
-    if ( item.url) {
-      if( item.auth) {
-        if ( this.data.user.uuid) {
-          utilRoute.navigate( item.url)
-        } else {
-        }
+    if (item.url) {
+      if (item.auth) {
+        app.handleIsLogin(utilRoute.navigate(item.url))
+      }
+    } else {
+      if (item.title == '退出') {
+        app.globalData.user_info = null;
+        utilStorage.removeKey('user_info');
+        this.onShow()
       }
     }
   },
-  // 点击登录
-  loginTap() {
-    wx.request({
-      url: 'http://localhost:7890' + '/login',
-      data:{
-        name: 'wt'
-      },
-      success:function(res){
-        console.log(res.data)
-      }
-    })
-    return
-    let user = {
-      nickname: '喵喵',
-      avatar: '/static/user/userImg.png',
-      uuid: 1
-    }
-    this.setData({
-      user: user
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -78,7 +67,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let user_info = app.globalData.user_info;
+    let index = this.data.menuList.length - 1
+    let menuList = `menuList[${index}].show`
+    if (user_info) {
+      this.setData({
+        user_info,
+        [menuList]: true
+      })
+    } else {
+      this.setData({
+        user_info,
+        [menuList]: false
+      })
+    }
   },
 
   /**
@@ -99,7 +101,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
   },
 
   /**

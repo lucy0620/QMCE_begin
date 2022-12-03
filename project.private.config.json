@@ -14,21 +14,21 @@
         },
         {
           "name": "",
-          "pathName": "pages/market/index",
+          "pathName": "pages/market/market",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/user/index",
+          "pathName": "pages/user/user",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/user/msgManage/index",
+          "pathName": "pages/user/msgManage/msgManage",
           "query": "",
           "launchMode": "default",
           "scene": null

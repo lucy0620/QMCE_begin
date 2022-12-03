@@ -1,4 +1,2 @@
 <!--pages/user/msgManage/index.wxml-->
-<app-msg
-
-></app-msg>
+<app-msg></app-msg>

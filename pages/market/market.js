@@ -9,29 +9,57 @@ Page({
   data: {
     isIphoneX: app.globalData.isIphoneX,
     background: app.globalData.background,
-    navbarData:　{
+    navbarData: {
       type: 2,
       search: {
         disabled: false,
-        placeholder: '请输入商品名称',
+        placeholder: '请输入搜索内容',
       }
     },
     cateList: [{
       name: '专业配送22222222'
-    },{
+    }, {
       name: '传统'
-    },{
+    }, {
       name: '传统'
-    },{
+    }, {
       name: '传统'
-    },{
+    }, {
       name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统5'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统'
+    }, {
+      name: '传统2'
+    }, {
+      name: '传统3'
+    }, {
+      name: '传统4'
+    }, {
+      name: '传统5'
     }]
 
   },
   // 导航搜索
   search(e) {
-    utilRoute.navigate('/pages/search/index?search='+e.detail)
+    utilRoute.navigate('/pages/search/index?search=' + e.detail)
   },
   /**
    * 生命周期函数--监听页面加载

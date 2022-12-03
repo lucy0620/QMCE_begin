@@ -4,29 +4,29 @@
  * @param {*} icon 图标样式 success/error/loading
  * @param {*} data 其他配置
  */
-export function showMyMsg(title, icon='none', data = {}) {
-	wx.showToast({
-		title,
-		icon,
-		...data
-	})
+export function showMyMsg(title, icon = 'none', data = {}) {
+  wx.showToast({
+    title,
+    icon,
+    ...data
+  })
 }
 /**
  * 转圈提示
  * @param {*} title  提示的内容
  * @param {*} mask 是否显示透明蒙层
  */
-export function showMyLoading(title='', mask = true) {
-	wx.showLoading({
-		title,
-		mask
-	})
+export function showMyLoading(title = '', mask = true) {
+  wx.showLoading({
+    title,
+    mask
+  })
 }
 /**
  * 关闭转圈提示
  */
 export function hideMyLoading() {
-	wx.hideLoading()
+  wx.hideLoading()
 }
 /**
  * 弹窗提示
@@ -36,10 +36,10 @@ export function hideMyLoading() {
  * @param {*} data 其他配置
  */
 export function showMyModal(content = '', title = '提示', showCancel = false, data = {}) {
-	wx.showModal({
-		content,
-		title,
-		showCancel,
-		...data
-	})
+  wx.showModal({
+    content,
+    title,
+    showCancel,
+    ...data
+  })
 }

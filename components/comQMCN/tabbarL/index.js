@@ -28,13 +28,13 @@ Component({
         "text": "首页",
       },
       {
-        "iconName": 'cuIcon-shop',
-        "pagePath": "/pages/market/index",
-        "text": "超市",
+        "iconName": 'cuIcon-similar',
+        "pagePath": "/pages/market/market",
+        "text": "分类",
       },
       {
-        "iconName": 'cuIcon-vip',
-        "pagePath": "/pages/user/index",
+        "iconName": 'cuIcon-people',
+        "pagePath": "/pages/user/user",
         "text": "我的",
       }
     ]

@@ -1,5 +1,5 @@
 // 从基础库2.7.1开始支持
-const log = wx.getRealtimeLogManager? wx.getRealtimeLogManager() : null;
+const log = wx.getRealtimeLogManager ? wx.getRealtimeLogManager() : null;
 module.exports = {
   info() {
     if (!log) return

@@ -65,7 +65,8 @@ export function formatDate(date) {
 export function comparedate(startTime, endTime) {
   return this.formatDate(startTime) >= this.formatDate(endTime);
 }
-function formatNumber (n) {
+
+function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : `0${n}`
 }

@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/market/index",
-    "pages/user/index",
-    "pages/authorize/index",
-    "pages/search/index",
-    "pages/user/msgManage/index"
+    "pages/market/market",
+    "pages/user/user",
+    "pages/authorize/authorize",
+    "pages/search/search",
+    "pages/user/msgManage/msgManage"
   ],
   "window": {
     "navigationStyle": "custom",
@@ -24,11 +24,11 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/market/index",
+        "pagePath": "pages/market/market",
         "text": "超市"
       },
       {
-        "pagePath": "pages/user/index",
+        "pagePath": "pages/user/user",
         "text": "我的"
       }
     ]

@@ -1,11 +1,13 @@
 /* pages/authorize/authorize.wxss */
-.container{
+.container {
   background: #ffffff;
 }
-page{
+
+page {
   background: #ffffff;
 }
-.cont{
+
+.cont {
   width: 710rpx;
   margin: 0 auto;
   display: flex;
@@ -13,7 +15,8 @@ page{
   justify-content: center;
   align-items: center;
 }
-.selinfo{
+
+.selinfo {
   height: 120rpx;
   display: flex;
   flex-direction: row;
@@ -21,16 +24,19 @@ page{
   align-items: center;
   width: 95%;
 }
-.selinfo .sel{
+
+.selinfo .sel {
   height: 50rpx;
   width: 50rpx;
 }
-.selinfo label{
+
+.selinfo label {
   width: 650rpx;
   color: #666;
   margin-left: 20rpx;
 }
-.tit2{
+
+.tit2 {
   font-size: 17px;
   color: #000000;
   margin-bottom: 30rpx;
@@ -38,22 +44,25 @@ page{
   font-size: 14px;
 }
 
-.sel1{
+.sel1 {
   width: 115rpx;
   height: 115rpx;
   margin-bottom: 60rpx;
   border-radius: 50%;
   box-shadow: 0 0 6px #f3af44;
 }
-.tit{
+
+.tit {
   font-size: 24px;
   color: #000000;
   margin-bottom: 60rpx;
 }
-.bottom-btn{
+
+.bottom-btn {
   margin-top: 250rpx;
 }
-.bottom-btn button{
+
+.bottom-btn button {
   width: 350rpx;
   height: 80rpx;
   line-height: 80rpx;
@@ -64,10 +73,12 @@ page{
   margin: 0 auto;
   padding: 0;
 }
-.bottom-new{
+
+.bottom-new {
   margin-top: 30rpx;
 }
-.bottom-new button{
+
+.bottom-new button {
   width: 350rpx;
   height: 80rpx;
   line-height: 80rpx;

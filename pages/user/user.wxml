@@ -1,0 +1,22 @@
+<!-- 头部信息 -->
+<view class="userinfo">
+  <view class="blur">
+    <image wx:if="{{user_info.avatar}}" src="{{user_info.avatar}}" mode="aspectFit"></image>
+  </view>
+  <image wx:if="{{user_info.avatar}}" class="avatar" src="{{user_info.avatar}}" mode=""></image>
+  <image wx:else class="avatar" src="/static/default/default_avatar.png" mode=""></image>
+  <view wx:if="{{user_info.nickName}}" class="nickname">{{user_info.nickName}}</view>
+  <view wx:else bindtap="loginTap" class="nickname">点击登录</view>
+</view>
+
+<!-- 设置等 -->
+<view class="item-wrap" style="bottom: {{ isIphoneX ? '178rpx' : '110rpx'}};">
+  <view class="item" wx:for="{{ menuList}}" wx:if="{{item.show}}" wx:key="item" data-item="{{item}}" bindtap="menuTap">
+    <text>{{ item.title}}</text>
+    <text wx:if="{{ item.link}}" class="cuIcon-right"></text>
+  </view>
+</view>
+
+
+<!-- tabbar -->
+<tab-bar active="{{2}}" activeColor="{{ background }}" isIphoneX="{{ isIphoneX }}"></tab-bar>

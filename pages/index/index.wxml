@@ -6,8 +6,9 @@
 <!-- wxs引用 -->
 <!-- <view>{{indexWxs.message}}</view>
 <wxs src="./index.wxs" module="indexWxs"></wxs> -->
-    
-<nav-bar navbarData = "{{ navbarData }}"  bind:searchConfirm = "search"></nav-bar>
+
+<nav-bar navbarData="{{ navbarData }}" bind:searchConfirm="search"></nav-bar>
+
 
 <button open-type="share">分享</button>
 <view>
@@ -20,6 +21,6 @@
 </view>
 <view class="themeTitle">
   剧情介绍
-</view>  
+</view>
 
-<tab-bar activeColor = "{{ background }}" isIphoneX = "{{ isIphoneX }}"></tab-bar>
+<tab-bar activeColor="{{ background }}" isIphoneX="{{ isIphoneX }}"></tab-bar>

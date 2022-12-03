@@ -5,6 +5,7 @@
   border-bottom-left-radius: 30rpx;
   border-bottom-right-radius: 30rpx;
 }
+
 .blur {
   width: 750rpx;
   height: 300rpx;
@@ -13,18 +14,20 @@
   background-color: var(--myTheme);
   box-shadow: 5rpx 5rpx 25rpx 5rpx var(--gray);
 }
-.blur image{
+
+.blur image {
   position: absolute;
   top: -33%;
   width: 750rpx;
   height: 750rpx;
-  filter:blur(10rpx);
-  -webkit-filter:blur(10rpx);
-  -moz-filter:blur(10rpx);
-  -ms-filter:blur(10rpx);
-  -o-filter:blur(10rpx);
+  filter: blur(10rpx);
+  -webkit-filter: blur(10rpx);
+  -moz-filter: blur(10rpx);
+  -ms-filter: blur(10rpx);
+  -o-filter: blur(10rpx);
 }
-.avatar{
+
+.avatar {
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
@@ -32,7 +35,8 @@
   margin: 0 auto;
   transform: translateY(-75rpx);
 }
-.nickname{
+
+.nickname {
   color: var(--gray);
   font-weight: 600;
   font-size: 40rpx;
@@ -40,8 +44,9 @@
   transform: translateY(-37.5rpx);
   letter-spacing: 10rpx;
 }
+
 /* 设置等 */
-.item-wrap{
+.item-wrap {
   font-size: 30rpx;
   letter-spacing: 10rpx;
   position: fixed;
@@ -51,13 +56,15 @@
   border-top-left-radius: 30rpx;
   border-top-right-radius: 30rpx;
 }
-.item{
+
+.item {
   color: var(--gray);
   display: flex;
   justify-content: space-between;
   padding: 30rpx 0;
   border-bottom: 1rpx solid var(--myTheme);
 }
-.item:last-of-type{
+
+.item:last-of-type {
   border-bottom: 0rpx;
 }

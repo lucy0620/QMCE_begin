@@ -7,8 +7,8 @@ let Pattern = {
   isCnAndEnAndNum: /^[\u4e00-\u9fa5-a-zA-Z0-9]+$/,
   isUserName: /^[(\u4e00-\u9fa5)a-zA-Z]+$/,
   // isPassword: /^(?:\d+|[a-zA-Z]+|[!@#~$%^_&*]+){8,}$/,
-	 // isPassword: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/,
-	isPassword: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z\W]{8,}$/,
+  // isPassword: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/,
+  isPassword: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z\W]{8,}$/,
   isAuthCode: /^[0-9]{4}$/,
   isEmail: /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
   isTelAndMobile: /^(1[3|4|5|7|8][\d]{9}|0[\d]{2,3}-[\d]{7,8}|400[-]?[\d]{3}[-]?[\d]{4})$/,
@@ -89,17 +89,17 @@ const validator = {
     }
     return validator.executeExp(Pattern.isAuthCode, strValue)
   },
-	/**
-	 * 判断邮箱格式
-	 * @param strValue 校验的值
-	 * @returns {boolean}
-	 */
-	isEmail: function (strValue) {
-	  if (validator.isEmpty(strValue)) {
-	    return false
-	  }
-	  return validator.executeExp(Pattern.isEmail, strValue)
-	},
+  /**
+   * 判断邮箱格式
+   * @param strValue 校验的值
+   * @returns {boolean}
+   */
+  isEmail: function (strValue) {
+    if (validator.isEmpty(strValue)) {
+      return false
+    }
+    return validator.executeExp(Pattern.isEmail, strValue)
+  },
   /**
    * 判断是否为手机号码
    * @param strValue 校验的值

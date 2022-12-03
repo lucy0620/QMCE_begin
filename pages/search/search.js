@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navbarData:　{
+    navbarData: {
       type: 1,
       title: '搜索页',
       home: true,

@@ -1,3 +1,0 @@
-<!--pages/search/search.wxml-->
-<nav-bar navbarData = "{{ navbarData }}"></nav-bar>
-<text>一个搜索页面</text>
