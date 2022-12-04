@@ -83,7 +83,9 @@ Page({
                 })
                 utilStorage.setKey('user_info', res.data.user_info)
                 app.globalData.user_info = res.data.user_info
-                // 这个用户没绑手机号
+                // 先不做手机号授权了，登录完成直接返回吧
+                that.backPage()
+                // 这个用户没绑手机号 todo
                 if (!res.data.user_info.phone) {
                   that.setData({
                     isGetPhone: true

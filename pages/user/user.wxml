@@ -1,9 +1,9 @@
 <!-- 头部信息 -->
 <view class="userinfo">
   <view class="blur">
-    <image wx:if="{{user_info.avatar}}" src="{{user_info.avatar}}" mode="aspectFit"></image>
+    <image wx:if="{{user_info.avatarUrl}}" src="{{user_info.avatar}}" mode="aspectFit"></image>
   </view>
-  <image wx:if="{{user_info.avatar}}" class="avatar" src="{{user_info.avatar}}" mode=""></image>
+  <image wx:if="{{user_info.avatarUrl}}" class="avatar" src="{{user_info.avatarUrl}}" mode=""></image>
   <image wx:else class="avatar" src="/static/default/default_avatar.png" mode=""></image>
   <view wx:if="{{user_info.nickName}}" class="nickname">{{user_info.nickName}}</view>
   <view wx:else bindtap="loginTap" class="nickname">点击登录</view>

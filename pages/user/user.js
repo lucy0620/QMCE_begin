@@ -39,7 +39,9 @@ Page({
     let item = e.currentTarget.dataset.item
     if (item.url) {
       if (item.auth) {
-        app.handleIsLogin(utilRoute.navigate(item.url))
+        app.handleIsLogin(function(){
+          utilRoute.navigate(item.url)
+        })
       }
     } else {
       if (item.title == '退出') {

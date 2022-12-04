@@ -50,14 +50,15 @@ App({
 
   /**
    * 是否已经登录
-   * 已登录 执行回调
-   * 未登录 跳转到授权登录页
+   * 已登录:执行回调
+   * 未登录:跳转到授权登录页
    */
-  isLoginHandle(callback) {
+  handleIsLogin(callback) {
     if (this.globalData.user_info) {
       callback
     } else {
       utilRoute.navigate(this.globalData.authorizeUrl)
     }
-  }
+  },
+  
 })
